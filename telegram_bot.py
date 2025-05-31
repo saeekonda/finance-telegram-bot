@@ -3,7 +3,8 @@ import yfinance as yf
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 
-BOT_TOKEN = '7947974420:AAES-jtRaEVqNkcbyJeZt-6YYepGGk8NULQ'  # 🔒 Replace with your actual token
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+  # 🔒 Replace with your actual token
 
 # Function to get live stock or crypto price
 def get_price(symbol):
