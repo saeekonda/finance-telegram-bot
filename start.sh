@@ -1,13 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Exit on error
 set -e
 
 # Create virtual environment if it doesn't exist
-if [ ! -d "venv" ]; then
-    echo "Creating virtual environment..."
-    python3 -m venv venv
-fi
+[ ! -d "venv" ] && python3 -m venv venv
 
 # Activate virtual environment
 echo "Activating virtual environment..."
